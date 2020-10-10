@@ -18,9 +18,9 @@ class HogTile extends React.Component{
         let pigImage = require(`../hog-imgs/${name.toLowerCase().replace(/ /g,"_")}.jpg`)
 
         return(
-            <li className="ui eight wide column" onClick={this.handleDetails}>
+            <li className="ui eight wide column">
                 <h3> {name} </h3>
-                <img src={pigImage} alt={name}/>
+                <img src={pigImage} alt={name} onClick={this.handleDetails}/>
 
                 { this.state.open? <p> <strong>Specialty:</strong> {specialty}</p> : <p></p>}
                 { this.state.open? <p> <strong>Weight:</strong> {weight} </p> : <p></p>}

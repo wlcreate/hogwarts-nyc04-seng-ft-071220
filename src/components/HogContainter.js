@@ -6,18 +6,16 @@ function HogContainer(props) {
     let arrayOfComponents = props.hogsArray.map((hogObj) => {
         return(
             <HogTile 
-                key={hogObj.id}
+                key={hogObj.name}
                 hog={hogObj}
             />
         )
     })
 
     return(
-        <div className="ui grid container"> 
-            <ul>
-                {arrayOfComponents}
-            </ul>
-        </div>
+        <ul className="ui grid container">
+            {arrayOfComponents}
+        </ul>
     )
 }
 
